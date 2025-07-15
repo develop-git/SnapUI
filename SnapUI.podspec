@@ -17,6 +17,14 @@ Pod::Spec.new do |s|
    #s.documentation_url = ''
 
    s.requires_arc = true
+   s.pod_target_xcconfig = {
+   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 armv7 arm64',
+   'VALID_ARCHS' => 'x86_64 armv7 arm64',
+   }
+   s.user_target_xcconfig = {
+   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 armv7 arm64',
+   'VALID_ARCHS' => 'x86_64 armv7 arm64',
+   }
    
    s.ios.deployment_target = '11.0'
    s.osx.deployment_target = '11.12'
