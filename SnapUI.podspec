@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
    s.summary = '对 SnapKit 进行链式编程扩展，同时避免了视图添加约束冲突、视图未添加到父视图等造成崩溃的问题'
    s.homepage = 'https://github.com/develop-git/SnapUI'
    s.authors = { 'jianli' => 'develop-work@outlook.com' }
-   s.source = { :git => 'git@github.com:develop-git/SnapUI.git', :tag => s.version.to_s }
+   s.source = { :git => 'https://github.com/develop-git/SnapUI.git', :tag => s.version.to_s }
    #s.documentation_url = ''
 
    s.requires_arc = true
