@@ -1,0 +1,6 @@
+framework module SystemExtension {
+  umbrella header "SystemExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SnapUI {
+  umbrella header "SnapUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
