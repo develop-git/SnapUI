@@ -8,7 +8,7 @@
 
 // MARK: trailing
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 【右边距，默认 10 】
@@ -92,7 +92,7 @@ public extension SnapViewDSL {
 
 // MARK: 右上 右下(done)
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     /// 【右上边距，默认 10 】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置

@@ -5,29 +5,29 @@
 //  Created by by jian on 2023/4/13.
 //
 
-#if os(iOS) || os(tvOS)
+#if os(iOS)
 import UIKit
 public typealias AppView = UIView
-#else
+#elseif os(macOS)
 import AppKit
 public typealias AppView = NSView
 #endif
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension AppView {
     var lyt: SnapViewDSL {
         return layoutDSL!
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension Array where Element: AppView {
     var lyt: SnapViewsDSL {
         return SnapViewsDSL(array: self)
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension AppView {
    
     /// 覆盖在视图之上，并返回布局对象
@@ -49,7 +49,7 @@ public extension AppView {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension Array where Element : AppView {
     
     /// 覆盖在视图之上，并返回布局对象
@@ -71,7 +71,7 @@ public extension Array where Element : AppView {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 是否在对应方向上进行压缩

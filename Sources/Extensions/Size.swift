@@ -8,7 +8,7 @@
 
 // MARK: - ------ size -------
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     /// 【SnapKit：将传入的数值赋值给当前对象的 width & height】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
@@ -70,7 +70,7 @@ public extension SnapViewDSL {
 
 // MARK: width
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 【 width】
@@ -108,7 +108,7 @@ public extension SnapViewDSL {
 
 // MARK: height
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 【height】

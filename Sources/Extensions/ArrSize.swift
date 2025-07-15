@@ -5,7 +5,7 @@
 //  Created by jian on 2023/8/10.
 //
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewsDSL {
 
     /// 【 width】
@@ -30,7 +30,7 @@ public extension SnapViewsDSL {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewsDSL {
 
     /// 【height】
@@ -55,7 +55,7 @@ public extension SnapViewsDSL {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewsDSL {
     
     /// 【水平布局】

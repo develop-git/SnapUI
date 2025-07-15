@@ -5,7 +5,7 @@
 //  Created by jian on 2023/10/19.
 //
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 若需要动态修改，将 offset 值设置为 .max/.min

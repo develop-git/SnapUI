@@ -4,7 +4,7 @@
 //
 //  Created by jian on 2023/8/10.
 //
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public struct SnapViewDSL {
     internal let view: AppView
     internal let constraint: SnapConstraint
@@ -14,7 +14,7 @@ public struct SnapViewDSL {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public struct SnapViewsDSL {
     internal let array: [AppView]
     internal init(array: [AppView]) {
@@ -22,7 +22,7 @@ public struct SnapViewsDSL {
     }
 }
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 internal extension SnapViewDSL {
     
     /// 检验布局是否通过
@@ -99,7 +99,7 @@ internal extension SnapViewDSL {
 
 import SnapKit
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 private extension SnapViewDSL {
     
     typealias Attribute = Constraints.Attribute
@@ -221,7 +221,7 @@ private extension SnapViewDSL {
 }
 
 // MARK: Associated
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 internal extension AppView {
     private struct OBJCKEY {
         static var DSL: Void?

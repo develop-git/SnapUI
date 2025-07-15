@@ -8,7 +8,7 @@
 
 // MARK: top
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
     /// 【上边距 】

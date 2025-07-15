@@ -190,7 +190,7 @@ internal extension CombinedSize {
 }
 
 internal extension ViewCompressPriority {
-#if os(iOS) || os(tvOS)
+#if os(iOS)
     typealias Axis = NSLayoutConstraint.Axis
     typealias PriorityType = UILayoutPriority
 #else
@@ -225,7 +225,7 @@ internal extension ViewCompressPriority.Priority {
         case .high:
             return PriorityType(rawValue: 750.0)
         case .medium:
-        #if os(iOS) || os(tvOS)
+        #if os(iOS)
             return PriorityType(rawValue: 500.0)
         #else // macOS
             return PriorityType(rawValue: 501.0)

@@ -7,7 +7,7 @@
 
 // MARK: 水平
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     /// 【左右边距，默认 10 】
     @discardableResult

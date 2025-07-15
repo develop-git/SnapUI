@@ -7,7 +7,7 @@
 
 // MARK: - ------ Center  -------
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     /// 【以传入视图的中心点设置当前对象的中心点偏移】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min

@@ -5,7 +5,7 @@
 //  Created by jian on 2023/10/18.
 //
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     var width: ViewSizeAnchor {
         return ViewSizeAnchor(origin: view.snp.width, view: view)
@@ -26,7 +26,7 @@ public extension SnapViewDSL {
 
 // MARK: - y-axis (top bottom centerY)
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
 
     var top: ViewYaxisAnchor {
@@ -64,7 +64,7 @@ public extension SnapViewDSL {
 
 // MARK: - x-axis (leading trailing centerX)
 
-@available(iOS 11.0, macOS 11.0, tvOS 11.0, *)
+@available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
 
     var leading: ViewXaxisAnchor {
