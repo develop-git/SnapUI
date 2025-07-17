@@ -1,17 +1,17 @@
 PODS:
   - SnapKit (5.6.0)
-  - SnapUI (1.0.0):
+  - SnapUI (1.2.0):
     - SnapKit (~> 5.6.0)
-  - SystemExtension (1.1.0)
+  - UIKitExtra (1.0.0)
 
 DEPENDENCIES:
   - SnapUI (from `../`)
-  - SystemExtension
+  - UIKitExtra
 
 SPEC REPOS:
   trunk:
     - SnapKit
-    - SystemExtension
+    - UIKitExtra
 
 EXTERNAL SOURCES:
   SnapUI:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  SnapUI: b4b9ac4aa0f36b84f1f345df49440b74c07fa87f
-  SystemExtension: 745e46e4df6022857745117bf045d9040661a68b
+  SnapUI: bd5fb76301644c071b140f5d0345130657a81eb4
+  UIKitExtra: bde0f57981b093dd9dd6cccbcf9a42bab7e46367
 
-PODFILE CHECKSUM: 6f7f13088a9dc44b2e16cceab7599277247cd2a3
+PODFILE CHECKSUM: ea493b1840b837b1cc2e8d360e9bf3bd7efd8c2b
 
 COCOAPODS: 1.14.3

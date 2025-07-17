@@ -13,6 +13,12 @@ import AppKit
 public typealias AppView = NSView
 #endif
 
+/// 初始化控件
+public func initUI<T: UIResponder>(_ object: T = T.init(), closure: (T) -> Void) -> T {
+    closure(object)
+    return object
+}
+
 @available(iOS 11.0, macOS 11.0, *)
 public extension AppView {
     var lyt: SnapViewDSL {

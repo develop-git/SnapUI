@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
    s.name = 'SnapUI'
-   s.version = '1.1.0'
+   s.version = '1.2.0'
    s.license = 'MIT'
    s.summary = '对 SnapKit 进行链式编程扩展，同时避免了视图添加约束冲突、视图未添加到父视图等造成崩溃的问题'
    s.homepage = 'https://github.com/develop-git/SnapUI'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
    s.ios.deployment_target = '11.0'
    s.osx.deployment_target = '11.12'
 
-   s.swift_versions = ['5.5']
+   s.swift_versions = ['5.0']
 
    s.source_files = 'Sources/**/*.swift'
    

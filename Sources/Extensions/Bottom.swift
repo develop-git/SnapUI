@@ -14,7 +14,7 @@ public extension SnapViewDSL {
     /// max:  <= value
     /// min: >= value
     @discardableResult
-    func bottom(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func bottom(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .bottom, extra: offset.invertVal) else { return self }
         return offsetBy(ret.anchor, for: .bottom, extra: ret.extra)
     }
@@ -29,7 +29,7 @@ public extension SnapViewDSL {
     /// 【下安全边距 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func safeBottom(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeBottom(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .bottom, extra: offset.invertVal, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .bottom, extra: ret.extra)
     }
@@ -37,7 +37,7 @@ public extension SnapViewDSL {
     /// 【下边距 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func bottom(by anchor: ViewYaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func bottom(by anchor: ViewYaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .bottom, from: anchor, extra: offset.invertVal) else { return self }
         return offsetBy(ret.anchor, for: .bottom, extra: ret.extra)
     }
@@ -53,7 +53,7 @@ public extension SnapViewDSL {
     /// 【下安全边距 】
     /// 若需要动态修改，将offset值设置为 .max/.min
     @discardableResult
-    func safeBottom(by anchor: ViewYaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeBottom(by anchor: ViewYaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .bottom, from: anchor, extra: offset.invertVal, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .bottom, extra: ret.extra)
     }

@@ -10,7 +10,7 @@
 public extension SnapViewDSL {
     /// 【左边距，默认 10 】
     @discardableResult
-    func leading(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func leading(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .leading, extra: offset) else { return self }
         return offsetBy(ret.anchor, for: .leading, extra: ret.extra)
     }
@@ -25,7 +25,7 @@ public extension SnapViewDSL {
     /// 【左安全边距 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func safeLeading(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeLeading(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .leading, extra: offset, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .leading, extra: ret.extra)
     }
@@ -33,7 +33,7 @@ public extension SnapViewDSL {
     /// 【左边距 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func leading(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func leading(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .leading, from: anchor, extra: offset) else { return self }
         return offsetBy(ret.anchor, for: .leading, extra: ret.extra)
     }
@@ -49,7 +49,7 @@ public extension SnapViewDSL {
     /// 【左安全边距】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func safeLeading(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeLeading(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .leading, from: anchor, extra: offset, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .leading, extra: ret.extra)
     }
@@ -93,7 +93,7 @@ public extension SnapViewDSL {
     /// 【左上边距，默认 10 】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func leadingTop(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func leadingTop(_ value: CombinedLiteral = .default) -> Self {
         return self.leading(value)
             .top(value)
     }
@@ -105,7 +105,7 @@ public extension SnapViewDSL {
     }
     
     @discardableResult
-    func safeLeadingTop(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeLeadingTop(_ value: CombinedLiteral = .default) -> Self {
         return self.safeLeading(value)
             .safeTop(value)
     }
@@ -142,7 +142,7 @@ public extension SnapViewDSL {
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func leadingBottom(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func leadingBottom(_ value: CombinedLiteral = .default) -> Self {
         return self.leading(value)
             .bottom(value)
     }
@@ -154,7 +154,7 @@ public extension SnapViewDSL {
     }
     
     @discardableResult
-    func safeLeadingBottom(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeLeadingBottom(_ value: CombinedLiteral = .default) -> Self {
         return self.safeLeading(value)
             .safeBottom(value)
     }

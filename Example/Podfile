@@ -6,6 +6,8 @@ platform :ios, '12.0'
 
 target 'SnapUI_Example' do
   pod 'SnapUI', :path => '../'
+  
+  pod 'UIKitExtra'
 
   target 'SnapUI_Tests' do
     inherit! :search_paths

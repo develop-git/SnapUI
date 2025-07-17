@@ -25,14 +25,14 @@ public extension SnapViewDSL {
     
     /// 【以传入的数值设置当前对象的 上下左右 边距，默认 10 】
     @discardableResult
-    func margins(_ len: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func margins(_ len: CombinedLiteral = .default) -> Self {
         return self.top(len).bottom(len)
             .leading(len).trailing(len)
     }
     
     /// 【以传入的数值设置当前对象的 上下左右安全边距，默认 10 】
     @discardableResult
-    func safeMargins(_ len: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeMargins(_ len: CombinedLiteral = .default) -> Self {
         return self.safeTop(len).safeBottom(len)
             .safeLeading(len).safeTrailing(len)
     }

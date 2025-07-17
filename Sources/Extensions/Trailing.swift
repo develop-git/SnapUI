@@ -14,7 +14,7 @@ public extension SnapViewDSL {
     /// 【右边距，默认 10 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func trailing(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func trailing(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .trailing, extra: offset.invertVal) else { return self }
         return offsetBy(ret.anchor, for: .trailing, extra: ret.extra)
     }
@@ -28,7 +28,7 @@ public extension SnapViewDSL {
     /// 【右安全边距，默认 10 】
     /// 若需要动态修改，将 offset 值设置为 .max/.min
     @discardableResult
-    func safeTrailing(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeTrailing(_ offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .trailing, extra: offset.invertVal, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .trailing, extra: ret.extra)
     }
@@ -36,7 +36,7 @@ public extension SnapViewDSL {
     /// 【右边距，默认 10 】
     /// 若需要动态修改，将offset值设置为 .max/.min
     @discardableResult
-    func trailing(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func trailing(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .trailing, from: anchor, extra: offset.invertVal) else { return self }
         return offsetBy(ret.anchor, for: .trailing, extra: ret.extra)
     }
@@ -52,7 +52,7 @@ public extension SnapViewDSL {
     /// 【右安全边距 】
     /// 若需要动态修改，将offset值设置为 .max/.min
     @discardableResult
-    func safeTrailing(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeTrailing(by anchor: ViewXaxisAnchor?, offset: CombinedLiteral = .default) -> Self {
         guard let ret = verify(at: .trailing, from: anchor, extra: offset.invertVal, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .trailing, extra: ret.extra)
     }
@@ -97,7 +97,7 @@ public extension SnapViewDSL {
     /// 【右上边距，默认 10 】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingTop(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func trailingTop(_ value: CombinedLiteral = .default) -> Self {
         return self.trailing(value)
             .top(value)
     }
@@ -109,7 +109,7 @@ public extension SnapViewDSL {
     }
     
     @discardableResult
-    func safeTrailingTop(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeTrailingTop(_ value: CombinedLiteral = .default) -> Self {
         return self.safeTrailing(value)
             .safeTop(value)
     }
@@ -145,7 +145,7 @@ public extension SnapViewDSL {
     /// 【右下边距，默认 10 】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingBottom(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func trailingBottom(_ value: CombinedLiteral = .default) -> Self {
         return self.trailing(value)
             .bottom(value)
     }
@@ -157,7 +157,7 @@ public extension SnapViewDSL {
     }
     
     @discardableResult
-    func safeTrailingBottom(_ value: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safeTrailingBottom(_ value: CombinedLiteral = .default) -> Self {
         return self.safeTrailing(value)
             .safeBottom(value)
     }

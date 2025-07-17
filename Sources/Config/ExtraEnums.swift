@@ -49,6 +49,7 @@ public enum CombinedLiteral : ExpressibleByNilLiteral, ExpressibleByFloatLiteral
     }
     
     /// Equal
+    case `default` // = 10
     case halfone   // = 0.5
     case one    // = 1.0
     case equal(_ value: Float) // = value
@@ -67,7 +68,7 @@ public enum CombinedOffset<T: ConstraintAnchor> {
     
     case bySuper        // offset = 0.0
     case offset(_ offset: CombinedLiteral)
-    case by(_ anchor: T?, offset: CombinedLiteral = .equal(.defaultOffset))
+    case by(_ anchor: T?, offset: CombinedLiteral = .default)
 }
 
 public typealias XaxisOffset = CombinedOffset<ViewXaxisAnchor>
@@ -127,6 +128,8 @@ internal extension CombinedLiteral {
     
     var raw: (val: Float, restrict: Constraints) {
         switch self {
+        case .default:
+            return (10, Relation.equal.constraints)
         case .halfone:
             return (0.5, Relation.equal.constraints)
         case .one:

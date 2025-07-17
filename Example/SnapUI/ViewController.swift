@@ -21,7 +21,7 @@
 
 import UIKit
 import SnapUI
-import SnapKit
+import UIKitExtra
 
 class ViewController: UIViewController {
 
@@ -29,11 +29,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // eg: 1
-        let temp = UIView()
-        temp.backgroundColor = .cyan
+       
+        let temp: UIView = initUI(.init()) { view in
+            view.set.background(.yellow)
+        }
         temp.add(to: view)
             .margins(.unbottom)
             .height(120)
+        
+        let lab: UILabel = initUI(.init(text: "Hellow init")) {
+            $0.set.background(.blue, radius: 10)
+                .textColor(.green)
+                .textAlign(.center)
+        }
+        lab.add(to: temp)
+            .safeMargins()
         
         // eg: 2
         let temp2 = UIView()
@@ -41,6 +51,7 @@ class ViewController: UIViewController {
         view.addSubview(temp2)
         temp2.lyt.size(100)
             .top(by: temp.lyt.bottom)
+        
     }
     
     func textlab(_ text: String) -> UILabel {

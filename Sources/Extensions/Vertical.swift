@@ -11,14 +11,14 @@
 public extension SnapViewDSL {
     /// 【上下边距，默认 10 】
     @discardableResult
-    func vertical(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func vertical(_ offset: CombinedLiteral = .default) -> Self {
         return self.top(offset)
             .bottom(offset)
     }
     
     /// 【上下边距，默认 10 】
     @discardableResult
-    func safevertical(_ offset: CombinedLiteral = .equal(.defaultOffset)) -> Self {
+    func safevertical(_ offset: CombinedLiteral = .default) -> Self {
         return safeTop(offset)
             .safeBottom(offset)
     }
