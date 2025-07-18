@@ -8,12 +8,6 @@
 #if os(iOS)
 import UIKit
 public typealias AppView = UIView
-
-/// 初始化控件
-public func initUI<T: UIResponder>(_ object: T = T.init(), closure: (T) -> Void) -> T {
-    closure(object)
-    return object
-}
 #elseif os(macOS)
 import AppKit
 public typealias AppView = NSView
