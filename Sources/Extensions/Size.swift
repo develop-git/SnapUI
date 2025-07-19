@@ -14,14 +14,12 @@ public extension SnapViewDSL {
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
     func size(_ value: CombinedLiteral) -> Self {
-        return self.width(value)
-            .height(value)
+        return self.width(value).height(value)
     }
     
     @discardableResult
     func size(by anchor: ViewSizeAnchor) -> Self {
-        return self.width(by: anchor)
-            .height(by: anchor)
+        return self.width(by: anchor).height(by: anchor)
     }
     
     /// 【将传入的width & height 数值赋值给当前对象的 width & height】
@@ -31,8 +29,7 @@ public extension SnapViewDSL {
     func size(width: CombinedLiteral,
               height: CombinedLiteral) -> Self
     {
-        return self.width(width)
-            .height(height)
+        return self.width(width).height(height)
     }
     
     /// 【将传入的width & height 数值赋值给当前对象的 width & height】
@@ -42,15 +39,13 @@ public extension SnapViewDSL {
     func size(width: CombinedSize,
               height: CombinedSize) -> Self
     {
-        return self.width(width)
-            .height(height)
+        return self.width(width).height(height)
     }
     
     @discardableResult
     func size(_ size: CombinedSize = .fill) -> Self
     {
-        return self.width(size)
-            .height(size)
+        return self.width(size).height(size)
     }
     
     /// 【将传入视图的size赋值给当前对象的size】
@@ -61,8 +56,7 @@ public extension SnapViewDSL {
               width widthMult: CombinedLiteral = .one,
               height heightMult: CombinedLiteral = .one) -> Self
     {
-        return self.width(by: view, mult: widthMult)
-            .height(by: view, mult: heightMult)
+        return self.width(by: view, mult: widthMult).height(by: view, mult: heightMult)
     }
 }
 

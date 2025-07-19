@@ -71,15 +71,13 @@ public extension SnapViewDSL {
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func topCenterX(_ top: YaxisOffset,
-                    _ centerX: XaxisOffset? = nil) -> Self
+    func topCenterX(_ top: YaxisOffset, _ centerX: XaxisOffset? = nil) -> Self
     {
         guard let centerX = centerX else {
             return self.top(top)
                 .centerX(by: top.raw.item?.view.lyt.centerX)
         }
-        return self.top(top)
-            .centerX(centerX)
+        return self.top(top).centerX(centerX)
     }
     
     /// 【上中边距，默认 0 】
@@ -87,7 +85,6 @@ public extension SnapViewDSL {
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
     func topCenterX(by top: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.top(by: top, offset: offset)
-            .centerX(by: top)
+        return self.top(by: top, offset: offset).centerX(by: top)
     }
 }

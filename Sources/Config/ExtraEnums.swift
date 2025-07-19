@@ -5,14 +5,6 @@
 //  Created by jian on 2023/8/9.
 //
 
-public extension Float {
-    static var defaultOffset: Float { 10 }
-}
-
-public extension Int {
-    static var defaultOffset: Int { 10 }
-}
-
 // MARK: 网格布局类型
 public enum GridItemsLayoutType : Int {
     case equal, square, flex

@@ -12,48 +12,40 @@ public extension SnapViewDSL {
     /// 【上下边距，默认 10 】
     @discardableResult
     func vertical(_ offset: CombinedLiteral = .default) -> Self {
-        return self.top(offset)
-            .bottom(offset)
+        return self.top(offset).bottom(offset)
     }
     
     /// 【上下边距，默认 10 】
     @discardableResult
     func safevertical(_ offset: CombinedLiteral = .default) -> Self {
-        return safeTop(offset)
-            .safeBottom(offset)
+        return safeTop(offset).safeBottom(offset)
     }
     
     /// 【左右边距 】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func vertical(_ top: CombinedLiteral,
-              _ bottom: CombinedLiteral) -> Self
+    func vertical(_ top: CombinedLiteral, _ bottom: CombinedLiteral) -> Self
     {
-        return self.top(top)
-            .bottom(bottom)
+        return self.top(top).bottom(bottom)
     }
     
     /// 【左右安全边距 】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func safevertical(_ top: CombinedLiteral,
-                  _ bottom: CombinedLiteral) -> Self
+    func safevertical(_ top: CombinedLiteral, _ bottom: CombinedLiteral) -> Self
     {
-        return safeTop(top)
-            .safeBottom(bottom)
+        return safeTop(top).safeBottom(bottom)
     }
     
     /// 【左右边距 】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func vertical(_ top: YaxisOffset,
-              _ bottom: YaxisOffset) -> Self
+    func vertical(_ top: YaxisOffset, _ bottom: YaxisOffset) -> Self
     {
-        return self.top(top)
-            .bottom(bottom)
+        return self.top(top).bottom(bottom)
     }
     
     /// 【左右边距，默认 0 】
@@ -64,7 +56,6 @@ public extension SnapViewDSL {
               top: CombinedLiteral = nil,
               bottom: CombinedLiteral = nil) -> Self
     {
-        return self.top(by: view.lyt.top, offset: top)
-            .bottom(by: view.lyt.bottom, offset: bottom)
+        return self.top(by: view.lyt.top, offset: top).bottom(by: view.lyt.bottom, offset: bottom)
     }
 }

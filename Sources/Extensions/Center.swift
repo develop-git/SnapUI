@@ -15,8 +15,7 @@ public extension SnapViewDSL {
     func center(offsetX: CombinedLiteral = nil,
                 offsetY: CombinedLiteral = nil) -> Self
     {
-        return self.centerX(offset: offsetX)
-            .centerY(offset: offsetY)
+        return self.centerX(offset: offsetX).centerY(offset: offsetY)
     }
     
     /// 【以传入的数值设置当前对象的中心点x偏移】
@@ -54,8 +53,7 @@ public extension SnapViewDSL {
                 offsetX: CombinedLiteral = nil,
                 offsetY: CombinedLiteral = nil) -> Self
     {
-        return self.centerX(by: view.lyt.centerX, offset: offsetX)
-            .centerY(by: view.lyt.centerY, offset: offsetY)
+        return self.centerX(by: view.lyt.centerX, offset: offsetX).centerY(by: view.lyt.centerY, offset: offsetY)
     }
     
     /// 【以传入视图的水平边界设置当前对象的中心点x】

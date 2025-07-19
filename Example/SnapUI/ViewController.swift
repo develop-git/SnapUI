@@ -23,6 +23,11 @@ import UIKit
 import SnapUI
 import UIKitExtra
 
+func initUI<T: UIResponder>(_ object: T = .init(), config: (T) -> Void) -> T {
+    config(object)
+    return object
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -34,16 +39,18 @@ class ViewController: UIViewController {
             view.set.background(.yellow)
         }
         temp.add(to: view)
-            .margins(.unbottom)
+            .margin(.unbottom, 10)
             .height(120)
         
         let lab: UILabel = initUI(.init(text: "Hellow init")) {
-            $0.set.background(.blue, radius: 10)
+            $0.set
+                .background(.blue, radius: 10, clips: true)
                 .textColor(.green)
                 .textAlign(.center)
         }
+//        temp.addSubview(lab)
         lab.add(to: temp)
-            .safeMargins()
+            .size(.wrap)
         
         // eg: 2
         let temp2 = UIView()
@@ -52,13 +59,13 @@ class ViewController: UIViewController {
         temp2.lyt.size(100)
             .top(by: temp.lyt.bottom)
         
-    }
-    
-    func textlab(_ text: String) -> UILabel {
-        let lab = UILabel()
-        lab.text = text
-        lab.backgroundColor = .orange
-        return lab
+        let tv: TempView = initUI { tv in
+            tv.set.background(.green)
+        }
+        tv.add(to: view)
+            .size(300)
+            .top(by: temp2.lyt.bottom)
+        
     }
 
     override func didReceiveMemoryWarning() {

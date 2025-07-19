@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		8E97D6962E2A21360038D7CF /* TestSnap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97D6952E2A21360038D7CF /* TestSnap.swift */; };
 		CA49C752D8366556EC573B66 /* Pods_SnapUI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0079CABEC588FF5F80D6F92C /* Pods_SnapUI_Tests.framework */; };
 		F8439FA5D3B08422DE694E26 /* Pods_SnapUI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8417123C1862F461EAC7E73 /* Pods_SnapUI_Example.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		67E5572C16615D01B3A0F9D9 /* Pods-SnapUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapUI_Tests.release.xcconfig"; path = "Target Support Files/Pods-SnapUI_Tests/Pods-SnapUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7625D6734992DD8B412732CA /* Pods-SnapUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapUI_Example.release.xcconfig"; path = "Target Support Files/Pods-SnapUI_Example/Pods-SnapUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		774793EDDF527909D5852CC8 /* SnapUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SnapUI.podspec; path = ../SnapUI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8E97D6952E2A21360038D7CF /* TestSnap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSnap.swift; sourceTree = "<group>"; };
 		A8417123C1862F461EAC7E73 /* Pods_SnapUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63CC7015AFC0A6F1F59EC7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				8E97D6952E2A21360038D7CF /* TestSnap.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				8E97D6962E2A21360038D7CF /* TestSnap.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

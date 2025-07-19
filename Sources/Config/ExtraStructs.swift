@@ -60,17 +60,17 @@ public extension SnapViewDSL {
 
         public static var all: RectEdge { RectEdge(rawValue: 15) }
         
-        public static var untop: SnapViewDSL.RectEdge { [.left, .bottom, .right] }
+        public static var untop: RectEdge { [.left, .bottom, .right] }
         
-        public static var unleft: SnapViewDSL.RectEdge { [.top, .bottom, .right] }
+        public static var unleft: RectEdge { [.top, .bottom, .right] }
         
-        public static var unbottom: SnapViewDSL.RectEdge { [.top, .left, .right] }
+        public static var unbottom: RectEdge { [.top, .left, .right] }
         
-        public static var unright: SnapViewDSL.RectEdge { [.top, .left, .bottom] }
+        public static var unright: RectEdge { [.top, .left, .bottom] }
         
-        public static var horizontal: SnapViewDSL.RectEdge { [.left, .right] }
+        public static var horizontal: RectEdge { [.left, .right] }
         
-        public static var vertical: SnapViewDSL.RectEdge { [.top, .bottom] }
+        public static var vertical: RectEdge { [.top, .bottom] }
     }
 }
 

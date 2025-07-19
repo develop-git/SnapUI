@@ -69,15 +69,13 @@ public extension SnapViewDSL {
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingCenterY(_ trailing: XaxisOffset,
-                         _ centerY: YaxisOffset? = nil) -> Self
+    func trailingCenterY(_ trailing: XaxisOffset, _ centerY: YaxisOffset? = nil) -> Self
     {
         guard let centerY = centerY else {
             return self.trailing(trailing)
                 .centerY(by: trailing.raw.item?.view.lyt.centerY)
         }
-        return self.trailing(trailing)
-            .centerY(centerY)
+        return self.trailing(trailing).centerY(centerY)
     }
     
     /// 【右中边距，默认 0 】
@@ -85,8 +83,7 @@ public extension SnapViewDSL {
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
     func trailingCenterY(by trailing: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.trailing(by: trailing, offset: offset)
-            .centerY(by: trailing)
+        return self.trailing(by: trailing, offset: offset).centerY(by: trailing)
     }
 }
 
@@ -98,95 +95,79 @@ public extension SnapViewDSL {
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
     func trailingTop(_ value: CombinedLiteral = .default) -> Self {
-        return self.trailing(value)
-            .top(value)
+        return self.trailing(value).top(value)
     }
     
     @discardableResult
     func trailingTop(by view: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.trailing(by: view, offset: offset)
-            .top(by: view, offset: offset)
+        return self.trailing(by: view, offset: offset).top(by: view, offset: offset)
     }
     
     @discardableResult
     func safeTrailingTop(_ value: CombinedLiteral = .default) -> Self {
-        return self.safeTrailing(value)
-            .safeTop(value)
+        return self.safeTrailing(value).safeTop(value)
     }
     
     @discardableResult
     func safeTrailingTop(by view: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.safeTrailing(by: view, offset: offset)
-            .safeTop(by: view, offset: offset)
+        return self.safeTrailing(by: view, offset: offset).safeTop(by: view, offset: offset)
     }
     
     /// 【右上边距 】
     /// 若需要 offset 动态变化，将值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingTop(_ trailing: CombinedLiteral,
-                     _ top: CombinedLiteral) -> Self
+    func trailingTop(_ trailing: CombinedLiteral, _ top: CombinedLiteral) -> Self
     {
-        return self.trailing(trailing)
-            .top(top)
+        return self.trailing(trailing).top(top)
     }
     
     /// 【右上边距 】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingTop(_ trailing: XaxisOffset,
-                     _ top: YaxisOffset) -> Self
+    func trailingTop(_ trailing: XaxisOffset, _ top: YaxisOffset) -> Self
     {
-        return self.trailing(trailing)
-            .top(top)
+        return self.trailing(trailing).top(top)
     }
     
     /// 【右下边距，默认 10 】
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
     func trailingBottom(_ value: CombinedLiteral = .default) -> Self {
-        return self.trailing(value)
-            .bottom(value)
+        return self.trailing(value).bottom(value)
     }
     
     @discardableResult
     func trailingBottom(by view: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.trailing(by: view, offset: offset)
-            .bottom(by: view, offset: offset)
+        return self.trailing(by: view, offset: offset).bottom(by: view, offset: offset)
     }
     
     @discardableResult
     func safeTrailingBottom(_ value: CombinedLiteral = .default) -> Self {
-        return self.safeTrailing(value)
-            .safeBottom(value)
+        return self.safeTrailing(value).safeBottom(value)
     }
     
     @discardableResult
     func safeTrailingBottom(by view: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.safeTrailing(by: view, offset: offset)
-            .safeBottom(by: view, offset: offset)
+        return self.safeTrailing(by: view, offset: offset).safeBottom(by: view, offset: offset)
     }
     
     /// 【右下边距】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingBottom(_ trailing: CombinedLiteral,
-                        _ bottom: CombinedLiteral) -> Self
+    func trailingBottom(_ trailing: CombinedLiteral, _ bottom: CombinedLiteral) -> Self
     {
-        return self.trailing(trailing)
-            .bottom(bottom)
+        return self.trailing(trailing).bottom(bottom)
     }
     
     /// 【右下边距 】
     /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func trailingBottom(_ trailing: XaxisOffset,
-                        _ bottom: YaxisOffset) -> Self
+    func trailingBottom(_ trailing: XaxisOffset, _ bottom: YaxisOffset) -> Self
     {
-        return self.trailing(trailing)
-            .bottom(bottom)
+        return self.trailing(trailing).bottom(bottom)
     }
 }

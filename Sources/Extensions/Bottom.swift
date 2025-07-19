@@ -77,8 +77,7 @@ public extension SnapViewDSL {
             return self.bottom(bottom)
                 .centerX(by: bottom.raw.item?.view.lyt.centerX)
         }
-        return self.bottom(bottom)
-            .centerX(centerX)
+        return self.bottom(bottom).centerX(centerX)
     }
     
     /// 【下中边距 】
