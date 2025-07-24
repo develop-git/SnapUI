@@ -64,27 +64,6 @@ public extension SnapViewDSL {
         guard let ret = verify(at: .trailing, from: view.lyt.safeTrailing, extra: offset.invertVal, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .trailing, extra: ret.extra)
     }
-    
-    /// 【右中边距】
-    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
-    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
-    @discardableResult
-    func trailingCenterY(_ trailing: XaxisOffset, _ centerY: YaxisOffset? = nil) -> Self
-    {
-        guard let centerY = centerY else {
-            return self.trailing(trailing)
-                .centerY(by: trailing.raw.item?.view.lyt.centerY)
-        }
-        return self.trailing(trailing).centerY(centerY)
-    }
-    
-    /// 【右中边距，默认 0 】
-    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
-    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
-    @discardableResult
-    func trailingCenterY(by trailing: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.trailing(by: trailing, offset: offset).centerY(by: trailing)
-    }
 }
 
 // MARK: 右上 右下(done)
@@ -169,5 +148,26 @@ public extension SnapViewDSL {
     func trailingBottom(_ trailing: XaxisOffset, _ bottom: YaxisOffset) -> Self
     {
         return self.trailing(trailing).bottom(bottom)
+    }
+    
+    /// 【右中边距】
+    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
+    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
+    @discardableResult
+    func trailingCenterY(_ trailing: XaxisOffset, _ centerY: YaxisOffset? = nil) -> Self
+    {
+        guard let centerY = centerY else {
+            return self.trailing(trailing)
+                .centerY(by: trailing.raw.item?.view.lyt.centerY)
+        }
+        return self.trailing(trailing).centerY(centerY)
+    }
+    
+    /// 【右中边距，默认 0 】
+    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
+    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
+    @discardableResult
+    func trailingCenterY(by trailing: AppView, offset: CombinedLiteral = nil) -> Self {
+        return self.trailing(by: trailing, offset: offset).centerY(by: trailing)
     }
 }

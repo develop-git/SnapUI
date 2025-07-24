@@ -44,13 +44,15 @@ class ViewController: UIViewController {
         
         let lab: UILabel = initUI(.init(text: "Hellow init")) {
             $0.set
-                .background(.blue, radius: 10, clips: true)
-                .textColor(.green)
-                .textAlign(.center)
+                .background(.blue, radius: 30, for: .diagonal)
+                .text(<#T##text: String?##String?#>)
         }
 //        temp.addSubview(lab)
         lab.add(to: temp)
-            .size(.wrap)
+            .bottom()
+            .width(200)
+//            .height(60)
+            .margin(.unright, 30)
         
         // eg: 2
         let temp2 = UIView()

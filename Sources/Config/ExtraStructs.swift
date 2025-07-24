@@ -10,7 +10,7 @@
 @available(iOS 11.0, macOS 11.0, *)
 public extension SnapViewDSL {
     
-    struct EdgeInsets {
+    struct Insets {
         
         public var top: CombinedLiteral
         public var left: CombinedLiteral
@@ -36,7 +36,7 @@ public extension SnapViewDSL {
             self.right = right
         }
         
-        public init(_ edge: RectEdge, _ len: CombinedLiteral) {
+        public init(_ edge: Rect, _ len: CombinedLiteral) {
             self.top = edge.contains(.top) ? len : 0.0
             self.bottom = edge.contains(.bottom) ? len : 0.0
             self.left = edge.contains(.left) ? len : 0.0
@@ -44,33 +44,33 @@ public extension SnapViewDSL {
         }
     }
 
-    struct RectEdge : OptionSet {
+    struct Rect : OptionSet {
         public var rawValue: UInt
 
         public init(rawValue: UInt) {
             self.rawValue = rawValue
         }
-        public static var top: RectEdge { RectEdge(rawValue: 1 << 0) }
+        public static var top: Rect { Rect(rawValue: 1 << 0) }
         
-        public static var left: RectEdge { RectEdge(rawValue: 1 << 1) }
+        public static var left: Rect { Rect(rawValue: 1 << 1) }
 
-        public static var bottom: RectEdge { RectEdge(rawValue: 1 << 2) }
+        public static var bottom: Rect { Rect(rawValue: 1 << 2) }
 
-        public static var right: RectEdge { RectEdge(rawValue: 1 << 3) }
+        public static var right: Rect { Rect(rawValue: 1 << 3) }
 
-        public static var all: RectEdge { RectEdge(rawValue: 15) }
+        public static var all: Rect { Rect(rawValue: 15) }
         
-        public static var untop: RectEdge { [.left, .bottom, .right] }
+        public static var untop: Rect { [.left, .bottom, .right] }
         
-        public static var unleft: RectEdge { [.top, .bottom, .right] }
+        public static var unleft: Rect { [.top, .bottom, .right] }
         
-        public static var unbottom: RectEdge { [.top, .left, .right] }
+        public static var unbottom: Rect { [.top, .left, .right] }
         
-        public static var unright: RectEdge { [.top, .left, .bottom] }
+        public static var unright: Rect { [.top, .left, .bottom] }
         
-        public static var horizontal: RectEdge { [.left, .right] }
+        public static var horizontal: Rect { [.left, .right] }
         
-        public static var vertical: RectEdge { [.top, .bottom] }
+        public static var vertical: Rect { [.top, .bottom] }
     }
 }
 

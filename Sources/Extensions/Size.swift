@@ -26,8 +26,7 @@ public extension SnapViewDSL {
     /// 若需要 width\ height 动态变化，可设置为 .max\.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func size(width: CombinedLiteral,
-              height: CombinedLiteral) -> Self
+    func size(width: CombinedLiteral, height: CombinedLiteral) -> Self
     {
         return self.width(width).height(height)
     }
@@ -36,8 +35,7 @@ public extension SnapViewDSL {
     /// 若需要 width\ height 动态变化，可设置为 .max\.min
     /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
     @discardableResult
-    func size(width: CombinedSize,
-              height: CombinedSize) -> Self
+    func size(width: CombinedSize, height: CombinedSize) -> Self
     {
         return self.width(width).height(height)
     }

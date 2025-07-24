@@ -59,15 +59,15 @@ public extension SnapViewsDSL {
 public extension SnapViewsDSL {
     
     /// 【水平布局】
-    /// 同时调用 horizontalLayout 和 verticalLayout 方法会造成约束冲突，此种情形应采用 grid 方法做网格布局
+    /// 同时调用 horizLayout 和 verticalLayout 方法会造成约束冲突，此种情形应采用 grid 方法做网格布局
     /// - Parameters:
     ///   - space: 子视图间距
     ///   - flex: 视图是否自动伸缩
     ///   - inset: 整体视图外边距
     @discardableResult
-    func horizontalLayout(space: Float,
+    func horizLayout(space: Float,
                     flex: Bool = false,
-                    insets: SnapViewDSL.EdgeInsets = .init()) -> Self
+                    insets: SnapViewDSL.Insets = .init()) -> Self
     {
         array.enumerated { v, emRef in
             let offset = emRef.isfirst ? insets.left : CombinedLiteral(value: space)
@@ -84,7 +84,7 @@ public extension SnapViewsDSL {
     }
 
     /// 【垂直布局】
-    /// 同时调用 horizontalLayout 和 verticalLayout 方法会造成约束冲突，此种情形应采用 grid 方法做网格布局
+    /// 同时调用 horizLayout 和 verticalLayout 方法会造成约束冲突，此种情形应采用 grid 方法做网格布局
     /// - Parameters:
     ///   - space: 子视图间距
     ///   - flex: 视图是否自动伸缩
@@ -92,7 +92,7 @@ public extension SnapViewsDSL {
     @discardableResult
     func verticalLayout(space: Float,
                     flex: Bool = false,
-                    insets: SnapViewDSL.EdgeInsets = .init()) -> Self
+                    insets: SnapViewDSL.Insets = .init()) -> Self
     {
         array.enumerated { v, emrt in
             let offset = emrt.isfirst ? insets.top : CombinedLiteral(value: space)
@@ -118,7 +118,7 @@ public extension SnapViewsDSL {
     func gridLayout(colums: Int,
                     layout: GridItemsLayoutType = .equal,
                     spaces: GridItemsSpaces = .one,
-                    insets: SnapViewDSL.EdgeInsets = .init()) -> Self
+                    insets: SnapViewDSL.Insets = .init()) -> Self
     {
         array.enumeratedGrid(colums: colums) { v, prev, row, col in
             // rows

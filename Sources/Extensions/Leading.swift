@@ -61,27 +61,6 @@ public extension SnapViewDSL {
         guard let ret = verify(at: .leading, from: view.lyt.safeLeading, extra: offset, inSafe: true) else { return self }
         return offsetBy(ret.anchor, for: .leading, extra: ret.extra)
     }
-    
-    /// 【左中边距】
-    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
-    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
-    @discardableResult
-    func leadingCenterY(_ leading: XaxisOffset, _ centerY: YaxisOffset? = nil) -> Self
-    {
-        guard let centerY = centerY else {
-            return self.leading(leading)
-                .centerY(by: leading.raw.item?.view.lyt.centerY)
-        }
-        return self.leading(leading).centerY(centerY)
-    }
-    
-    /// 【左中边距，默认 0 】
-    /// 若需要 offset 动态变化，将 offset 值设置为 .max/.min
-    /// 若需要设置视图是否可以压缩显示，可以调用 priority() / compress()方法进行设置
-    @discardableResult
-    func leadingCenterY(by leading: AppView, offset: CombinedLiteral = nil) -> Self {
-        return self.leading(by: leading, offset: offset).centerY(by: leading)
-    }
 }
 
 // MARK: 左上 左下(done)

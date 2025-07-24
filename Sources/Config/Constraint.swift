@@ -66,7 +66,7 @@ private extension SnapConstraint {
     /// - Returns: 验证结果
     func verify(at index: Constraints.Attribute, isSuper: Bool) -> Bool {
         // 宽度冲突
-        if !horizontalVerify(at: index, isSuper: isSuper) {
+        if !horizVerify(at: index, isSuper: isSuper) {
             return false
         }
         // 高度冲突
@@ -82,7 +82,7 @@ private extension SnapConstraint {
     ///   - index: 布局约束位置
     ///   - isSuper: 是否相对父视图进行布局
     /// - Returns: 验证结果
-    func horizontalVerify(at index: Constraints.Attribute, isSuper: Bool) -> Bool {
+    func horizVerify(at index: Constraints.Attribute, isSuper: Bool) -> Bool {
         guard let width = constraints[.width] else {
             return true
         }
@@ -91,8 +91,8 @@ private extension SnapConstraint {
         let hasCenterX = constraints.has(key: .centerX)
         let isEqual = width.relation == .equal
         
-        let horizontalWidth = isEqual && (hasLeading && index == .trailing || hasTrailing && index == .leading) && isSuper
-        if horizontalWidth {
+        let horizWidth = isEqual && (hasLeading && index == .trailing || hasTrailing && index == .leading) && isSuper
+        if horizWidth {
             #if DEBUG
             debugPrint("""
                  约束冲突：视图已经设置width，不能再同时设置leading和trailing。
@@ -103,10 +103,10 @@ private extension SnapConstraint {
             return false
         }
         
-        let horizontalCenter1 = hasCenterX && (index == .leading || index == .trailing)
-        let horizontalCenter2 = (hasLeading || hasTrailing) && (index == .centerX)
+        let horizCenter1 = hasCenterX && (index == .leading || index == .trailing)
+        let horizCenter2 = (hasLeading || hasTrailing) && (index == .centerX)
 
-        if isEqual && (horizontalCenter1 || horizontalCenter2) {
+        if isEqual && (horizCenter1 || horizCenter2) {
             #if DEBUG
             debugPrint("""
                 约束冲突：视图已经设置width与centerX, 不能再设置leading或trailing。

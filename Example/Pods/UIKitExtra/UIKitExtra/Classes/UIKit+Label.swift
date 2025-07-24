@@ -63,8 +63,14 @@ public extension UIKitSetting where Base : UILabel {
     /// - Parameters:
     ///   - text: 文字内容
     @discardableResult
-    func text(_ text: String?) -> Self {
+    func text(_ text: String?, color: UIColor? = nil, algin: NSTextAlignment? = nil) -> Self {
         self.base.text = text
+        if let color = color {
+            self.base.textColor = color
+        }
+        if let algin = algin {
+            self.base.textAlignment = algin
+        }
         return self
     }
     
